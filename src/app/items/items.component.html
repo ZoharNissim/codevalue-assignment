@@ -1,0 +1,12 @@
+<div class="itemsContainer">
+    <div *ngFor="let item of items" class="item" [class.selected]="item === selectedItem" [class.noMargin]="items.indexOf(item) === items.length - 1">
+        <div class="image"></div>
+        <div class="details">
+            <div class="name ellipsis"> {{ item.name }} </div>
+            <div class="description ellipsis"> {{ item.description }} </div>
+            <div class="price"> {{ item.price }}$ </div>
+        </div>
+        <button class="editBtn" (click)="editItem(item.id)"> Edit </button>
+        <button class="removeBtn" (click)="removeItem(item.id)"> Delete </button>
+    </div>
+</div>

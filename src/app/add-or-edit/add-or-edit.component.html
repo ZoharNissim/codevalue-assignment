@@ -1,0 +1,9 @@
+<div class="container" *ngIf="selectedItem.id !== null && selectedItem.name !== null && selectedItem.description !== null && selectedItem.price !== null"> 
+    <div class="title"> Product {{ selectedItem.id }} details </div>
+    <div class="image"></div>
+    Name: <input type="text" [(ngModel)]="name" />
+    Description: <input type="text" [(ngModel)]="description" />
+    Price: <input type="number" [(ngModel)]="price" />
+
+    <button (click)="save()" class="saveBtn"> Save </button>
+</div>
